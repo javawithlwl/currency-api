@@ -2,8 +2,12 @@ welcome:
   message: Welcome to Spring Boot3
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/currency-db
+    url: jdbc:postgresql://localhost:5432/iplstat
     username: dbuser
     password: dbuser
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081

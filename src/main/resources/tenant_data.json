@@ -1,0 +1,21 @@
+{
+  "KFC":
+  {
+      "url": "http://www.kfc.com",
+      "username": "admin",
+      "email": "admin@kfc.com"
+  },
+  "PUMA":
+  {
+    "url": "http://www.puma.com",
+    "username": "superadmin",
+    "email": "info@puma.com"
+  },
+  "NIKE":
+  {
+    "url": "http://www.nike.com",
+    "username": "admin",
+    "email": "info@nike.com"
+  }
+}
+
