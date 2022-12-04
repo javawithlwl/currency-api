@@ -1,6 +1,5 @@
 package com.lwl.currency.api;
-
-import com.lwl.currency.domain.CurrencyDetails;
+import com.lwl.currency.dto.CurrencyDetailsDto;
 import com.lwl.currency.service.CurrencyDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,7 +31,7 @@ public class CurrencyController {
       }
 
       @GetMapping("/{code}")
-      public ResponseEntity<CurrencyDetails> getCurrencyDetails(@PathVariable("code")String code){
+      public ResponseEntity<CurrencyDetailsDto> getCurrencyDetails(@PathVariable("code")String code){
             return ResponseEntity.ok(currencyDetailsService.getCurrencyByCode(code));
       }
 

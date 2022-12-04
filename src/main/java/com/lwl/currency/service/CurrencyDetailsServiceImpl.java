@@ -1,6 +1,7 @@
 package com.lwl.currency.service;
 
 import com.lwl.currency.domain.CurrencyDetails;
+import com.lwl.currency.dto.CurrencyDetailsDto;
 import com.lwl.currency.repo.CurrencyDetailsRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,17 @@ public class CurrencyDetailsServiceImpl implements  CurrencyDetailsService {
   }
 
   @Override
-  public CurrencyDetails getCurrencyByCode(String code) {
+  public CurrencyDetailsDto getCurrencyByCode(String code) {
     Assert.hasText(code,"Currency code can not be null or empty");
     Optional<CurrencyDetails> optCurrency = currencyDetailsRepo.findByCode(code);
-    return optCurrency.orElseThrow(()->new IllegalArgumentException("Unsupported currency code"));
+    CurrencyDetails currencyDetails = optCurrency.orElseThrow(() -> new IllegalArgumentException("Unsupported currency code"));
+    return CurrencyDetailsDto.builder()
+        .id(currencyDetails.getId())
+        .name(currencyDetails.getName())
+        .code(currencyDetails.getCode())
+        .symbol(currencyDetails.getSymbol())
+        .decimalPlaces(currencyDetails.getDecimalPlaces())
+        .build();
+
   }
 }
