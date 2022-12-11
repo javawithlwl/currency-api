@@ -3,5 +3,5 @@ RUN mkdir /home/currency-api
 copy . /home/currency-api
 RUN cd /home/currency-api && mvn package
 RUN cp /home/currency-api/target/*.jar app.jar
-EXPOSE 8089
+EXPOSE 8083
 ENTRYPOINT ["java","-jar","/app.jar"]
