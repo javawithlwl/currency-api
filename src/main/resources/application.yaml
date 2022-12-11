@@ -2,9 +2,9 @@ welcome:
   message: Welcome to Spring Boot3
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-ce80jepgp3jic2dpl7d0-a.oregon-postgres.render.com:5432/javawithlwl
-    username: dbuser
-    password: WvM6f1xKDBypfYSj8S6o6IhaQrqL0G6E
+    url: jdbc:postgresql://{url}:5432/javawithlwl
+    username: {username}
+    password: {password}
   jpa:
     show-sql: true
     hibernate:
