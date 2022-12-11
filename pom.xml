@@ -14,7 +14,7 @@
 	<name>currency-api</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>18</java.version>
 		<springdoc.openapi.version>1.6.13</springdoc.openapi.version>
 	</properties>
 	<dependencies>
