@@ -9,5 +9,6 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-server:
-  port: 8082
+jwt:
+   secret:
+      key: super_secret
